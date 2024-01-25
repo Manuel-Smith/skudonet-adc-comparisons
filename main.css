@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
+table {
+    padding: 1rem;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+    width: 100%; /* Make the table full width */
+}
+
+:root {
+    --circle-check-color: rgb(21, 169, 21);
+    --circle-xmark-color: rgba(236, 0, 0, 0.849);
+    --feature-section-background-color: rgb(240, 246, 240);
+    --feature-data-color: #b36464;
+    --row-bottom-border-color: #392e2e1d;
+    --text-data-color: #41463d;
+    --table-header-background-colors: #ffffff;
+    --table-header-colors: #380101;
+}
+
+.sticky-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.sticky-table th {
+    background-color: var(--table-header-background-colors);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.feature {
+    background-color: var(--feature-section-background-color);
+}
+
+.feature > td {
+    font-weight: bold;
+    color: var(--feature-data-color);
+}
+
+table, th {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    text-align: left;
+    color: var(--table-header-colors);
+    font-size: 1.2rem;
+}
+
+tr {
+    border-bottom: var(--row-bottom-border-color) solid 1px;
+    height: 4rem;
+}
+
+tr > td > .fa-circle-check {
+    color: var(--circle-check-color);
+}
+
+tr > td > .fa-circle-xmark {
+    color: var(--circle-xmark-color);
+}
+
+
+
+tr > *:nth-child(1) {
+    padding-left: 2rem;
+}
+
+td {
+    color: var(--text-data-color);
+    font-size: 1rem;
+}
+
+/* Responsive styles for smaller screens */
+/* Responsive styles for smaller screens */
+@media (max-width: 767px) {
+    td, th {
+        font-size: 0.8rem; /* Adjust font size for smaller screens */
+    }
+
+    tr > *:nth-child(1) {
+        padding-left: 0;
+    }
+
+    .sticky-table {
+        overflow-x: scroll;
+    }
+}
